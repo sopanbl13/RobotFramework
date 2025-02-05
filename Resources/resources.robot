@@ -25,5 +25,5 @@ ${Txt.ThanksOrder}      //*[@id="checkout_complete_container"]/h2
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    ${BROWSER}    executable_path=${CHROMEDRIVER_PATH}
+    Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
