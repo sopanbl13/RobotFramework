@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20240903 11:44:08.272" rpa="false" schemaversion="4">
-<suite id="s1" name="Login" source="d:\Test robot\Robot Test\RobotFramework\Test\login.robot">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20250205 22:30:52.322" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="d:\GIT SOPAN\RobotFramework\Test\login.robot">
 <test id="s1-t1" name="TC01-ValidLogin" line="10">
 <kw name="Given Open Browser To Login Page" library="resources">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -8,60 +8,59 @@
 <arg>${BROWSER}</arg>
 <arg>executable_path=${CHROMEDRIVER_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240903 11:44:08.496" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg timestamp="20240903 11:44:08.499" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
-<status status="PASS" starttime="20240903 11:44:08.495" endtime="20240903 11:44:10.541"/>
+<msg timestamp="20250205 22:30:52.512" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<status status="PASS" starttime="20250205 22:30:52.511" endtime="20250205 22:30:54.102"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240903 11:44:10.542" endtime="20240903 11:44:10.635"/>
+<status status="PASS" starttime="20250205 22:30:54.102" endtime="20250205 22:30:54.142"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:08.495" endtime="20240903 11:44:10.636"/>
+<status status="PASS" starttime="20250205 22:30:52.511" endtime="20250205 22:30:54.142"/>
 </kw>
 <kw name="When login with username standard_user and pass secret_sauce" sourcename="login with username ${username} and pass ${password}">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Txtbox.Username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:10.645" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:10.641" endtime="20240903 11:44:11.192"/>
+<msg timestamp="20250205 22:30:54.145" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:54.144" endtime="20250205 22:30:54.277"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Txtbox.Password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:11.193" level="INFO">Typing text 'secret_sauce' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:11.192" endtime="20240903 11:44:11.274"/>
+<msg timestamp="20250205 22:30:54.277" level="INFO">Typing text 'secret_sauce' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:54.277" endtime="20250205 22:30:54.368"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${Btn.Login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:11.275" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:11.274" endtime="20240903 11:44:17.024"/>
+<msg timestamp="20250205 22:30:54.369" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:54.368" endtime="20250205 22:30:55.004"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:10.638" endtime="20240903 11:44:17.025"/>
+<status status="PASS" starttime="20250205 22:30:54.143" endtime="20250205 22:30:55.004"/>
 </kw>
 <kw name="Then Login success">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Txt.Product}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240903 11:44:17.029" endtime="20240903 11:44:17.139"/>
+<status status="PASS" starttime="20250205 22:30:55.005" endtime="20250205 22:30:55.121"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:17.027" endtime="20240903 11:44:17.140"/>
+<status status="PASS" starttime="20250205 22:30:55.005" endtime="20250205 22:30:55.121"/>
 </kw>
 <kw name="When Click add to cart">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${BtnAdd.Backpack}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240903 11:44:17.143" endtime="20240903 11:44:17.221"/>
+<status status="PASS" starttime="20250205 22:30:55.121" endtime="20250205 22:30:55.135"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BtnAdd.Backpack}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:17.224" level="INFO">Clicking element '(//*[@class="btn_primary btn_inventory"])[1]'.</msg>
-<status status="PASS" starttime="20240903 11:44:17.221" endtime="20240903 11:44:17.401"/>
+<msg timestamp="20250205 22:30:55.135" level="INFO">Clicking element '(//*[@class="btn_primary btn_inventory"])[1]'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.135" endtime="20250205 22:30:55.190"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:17.142" endtime="20240903 11:44:17.402"/>
+<status status="PASS" starttime="20250205 22:30:55.121" endtime="20250205 22:30:55.190"/>
 </kw>
 <kw name="Then Makesure cart add +1">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -72,11 +71,11 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${PopUp.NotifCart}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20240903 11:44:17.526" level="INFO">Element '//*[@id="shopping_cart_container"]/a/span' is displayed.</msg>
-<status status="PASS" starttime="20240903 11:44:17.407" endtime="20240903 11:44:17.527"/>
+<msg timestamp="20250205 22:30:55.210" level="INFO">Element '//*[@id="shopping_cart_container"]/a/span' is displayed.</msg>
+<status status="PASS" starttime="20250205 22:30:55.191" endtime="20250205 22:30:55.210"/>
 </kw>
-<msg timestamp="20240903 11:44:17.528" level="INFO">${txt1} = True</msg>
-<status status="PASS" starttime="20240903 11:44:17.405" endtime="20240903 11:44:17.528"/>
+<msg timestamp="20250205 22:30:55.210" level="INFO">${txt1} = True</msg>
+<status status="PASS" starttime="20250205 22:30:55.191" endtime="20250205 22:30:55.210"/>
 </kw>
 <if>
 <branch type="IF" condition="${txt1} == &quot;False&quot;">
@@ -84,117 +83,117 @@
 <var>${popUpText}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20240903 11:44:17.531" endtime="20240903 11:44:17.532"/>
+<status status="NOT RUN" starttime="20250205 22:30:55.211" endtime="20250205 22:30:55.211"/>
 </kw>
-<status status="NOT RUN" starttime="20240903 11:44:17.529" endtime="20240903 11:44:17.533"/>
+<status status="NOT RUN" starttime="20250205 22:30:55.211" endtime="20250205 22:30:55.211"/>
 </branch>
 <branch type="ELSE">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${popUpText}</var>
 <arg>${PopUp.NotifCart}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:17.584" level="INFO">${popUpText} = 1</msg>
-<status status="PASS" starttime="20240903 11:44:17.535" endtime="20240903 11:44:17.584"/>
+<msg timestamp="20250205 22:30:55.228" level="INFO">${popUpText} = 1</msg>
+<status status="PASS" starttime="20250205 22:30:55.211" endtime="20250205 22:30:55.229"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:17.534" endtime="20240903 11:44:17.585"/>
+<status status="PASS" starttime="20250205 22:30:55.211" endtime="20250205 22:30:55.229"/>
 </branch>
-<status status="PASS" starttime="20240903 11:44:17.529" endtime="20240903 11:44:17.585"/>
+<status status="PASS" starttime="20250205 22:30:55.211" endtime="20250205 22:30:55.229"/>
 </if>
-<status status="PASS" starttime="20240903 11:44:17.404" endtime="20240903 11:44:17.585"/>
+<status status="PASS" starttime="20250205 22:30:55.190" endtime="20250205 22:30:55.229"/>
 </kw>
 <kw name="When Click cart">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Btn.Cart}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240903 11:44:17.587" endtime="20240903 11:44:17.609"/>
+<status status="PASS" starttime="20250205 22:30:55.230" endtime="20250205 22:30:55.246"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Btn.Cart}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:17.610" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
-<status status="PASS" starttime="20240903 11:44:17.609" endtime="20240903 11:44:17.790"/>
+<msg timestamp="20250205 22:30:55.247" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.247" endtime="20250205 22:30:55.345"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:17.587" endtime="20240903 11:44:17.791"/>
+<status status="PASS" starttime="20250205 22:30:55.229" endtime="20250205 22:30:55.345"/>
 </kw>
 <kw name="And Click CheckOut">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Btn.CheckOut}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240903 11:44:17.796" endtime="20240903 11:44:17.885"/>
+<status status="PASS" starttime="20250205 22:30:55.346" endtime="20250205 22:30:55.381"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Btn.CheckOut}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:17.888" level="INFO">Clicking element '//*[@id="cart_contents_container"]/div/div[2]/a[2]'.</msg>
-<status status="PASS" starttime="20240903 11:44:17.886" endtime="20240903 11:44:18.232"/>
+<msg timestamp="20250205 22:30:55.382" level="INFO">Clicking element '//*[@id="cart_contents_container"]/div/div[2]/a[2]'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.381" endtime="20250205 22:30:55.724"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:17.794" endtime="20240903 11:44:18.233"/>
+<status status="PASS" starttime="20250205 22:30:55.346" endtime="20250205 22:30:55.725"/>
 </kw>
 <kw name="Then Input personal information">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Txtbox.FirstName}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240903 11:44:18.237" endtime="20240903 11:44:18.328"/>
+<status status="PASS" starttime="20250205 22:30:55.725" endtime="20250205 22:30:55.750"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Txtbox.FirstName}</arg>
 <arg>test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:18.331" level="INFO">Typing text 'test' into text field '//*[@id="first-name"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:18.329" endtime="20240903 11:44:18.691"/>
+<msg timestamp="20250205 22:30:55.751" level="INFO">Typing text 'test' into text field '//*[@id="first-name"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.750" endtime="20250205 22:30:55.799"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Txtbox.LastName}</arg>
 <arg>test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:18.692" level="INFO">Typing text 'test' into text field '//*[@id="last-name"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:18.691" endtime="20240903 11:44:18.761"/>
+<msg timestamp="20250205 22:30:55.800" level="INFO">Typing text 'test' into text field '//*[@id="last-name"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.800" endtime="20250205 22:30:55.860"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Txtbox.PostalCode}</arg>
 <arg>12345</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:18.762" level="INFO">Typing text '12345' into text field '//*[@id="postal-code"]'.</msg>
-<status status="PASS" starttime="20240903 11:44:18.762" endtime="20240903 11:44:18.831"/>
+<msg timestamp="20250205 22:30:55.861" level="INFO">Typing text '12345' into text field '//*[@id="postal-code"]'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.861" endtime="20250205 22:30:55.924"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Btn.Continue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:18.832" level="INFO">Clicking element '//*[@id="checkout_info_container"]/div/form/div[2]/input'.</msg>
-<status status="PASS" starttime="20240903 11:44:18.831" endtime="20240903 11:44:19.381"/>
+<msg timestamp="20250205 22:30:55.925" level="INFO">Clicking element '//*[@id="checkout_info_container"]/div/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20250205 22:30:55.925" endtime="20250205 22:30:56.283"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:18.235" endtime="20240903 11:44:19.381"/>
+<status status="PASS" starttime="20250205 22:30:55.725" endtime="20250205 22:30:56.283"/>
 </kw>
 <kw name="When Confirm order">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${Btn.Finish}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240903 11:44:19.382" endtime="20240903 11:44:19.410"/>
+<status status="PASS" starttime="20250205 22:30:56.284" endtime="20250205 22:30:56.308"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Btn.Finish}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240903 11:44:19.411" level="INFO">Clicking element '//*[@id="checkout_summary_container"]/div/div[2]/div[8]/a[2]'.</msg>
-<status status="PASS" starttime="20240903 11:44:19.410" endtime="20240903 11:44:20.330"/>
+<msg timestamp="20250205 22:30:56.309" level="INFO">Clicking element '//*[@id="checkout_summary_container"]/div/div[2]/div[8]/a[2]'.</msg>
+<status status="PASS" starttime="20250205 22:30:56.308" endtime="20250205 22:30:56.896"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:19.381" endtime="20240903 11:44:20.331"/>
+<status status="PASS" starttime="20250205 22:30:56.283" endtime="20250205 22:30:56.896"/>
 </kw>
 <kw name="Then Success order">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Txt.ThanksOrder}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240903 11:44:20.332" endtime="20240903 11:44:20.352"/>
+<status status="PASS" starttime="20250205 22:30:56.897" endtime="20250205 22:30:56.916"/>
 </kw>
-<status status="PASS" starttime="20240903 11:44:20.331" endtime="20240903 11:44:20.352"/>
+<status status="PASS" starttime="20250205 22:30:56.897" endtime="20250205 22:30:56.916"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240903 11:44:20.353" endtime="20240903 11:44:22.478"/>
+<status status="PASS" starttime="20250205 22:30:56.916" endtime="20250205 22:30:59.058"/>
 </kw>
 <tag>functional</tag>
-<status status="PASS" starttime="20240903 11:44:08.494" endtime="20240903 11:44:22.480"/>
+<status status="PASS" starttime="20250205 22:30:52.510" endtime="20250205 22:30:59.061"/>
 </test>
-<status status="PASS" starttime="20240903 11:44:08.277" endtime="20240903 11:44:22.485"/>
+<status status="PASS" starttime="20250205 22:30:52.326" endtime="20250205 22:30:59.066"/>
 </suite>
 <statistics>
 <total>
@@ -208,6 +207,5 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240903 11:44:08.496" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
 </errors>
 </robot>
